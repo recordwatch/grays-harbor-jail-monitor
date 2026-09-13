@@ -4,8 +4,8 @@
 A public jail roster monitor for Grays Harbor County, WA (Aberdeen/Hoquiam). Scrapes the county's static HTML roster page every 30 minutes, tracks bookings and releases, and displays them on a public website.
 
 ## URLs
-- **Live site:** not deployed yet — will be https://theonlytacocat.github.io/grays-harbor-jail-monitor/ once GitHub Pages is enabled
-- **GitHub repo:** not created yet — planned at github.com/recordwatch/grays-harbor-jail-monitor
+- **Live site:** https://recordwatch.github.io/grays-harbor-jail-monitor/
+- **GitHub repo:** https://github.com/recordwatch/grays-harbor-jail-monitor
 - **Source data:** Grays Harbor County (Central Services dept) — http://ghlea.com/JailRosters/GHRoster.html ("County Wide" roster)
 
 ## Architecture
@@ -54,7 +54,7 @@ A public jail roster monitor for Grays Harbor County, WA (Aberdeen/Hoquiam). Scr
 - **Washington Jail Data hub** — https://wajaildata.org — landing page linking all county monitors; served from `mason-jail-roster/server.js` around the `.nav-section` block. Add a `<a class="nav-btn">` entry there once this site is live.
 
 ## Setup steps still needed
-1. Create the `recordwatch/grays-harbor-jail-monitor` GitHub repo, add as remote, and push
-2. Enable GitHub Pages (Settings → Pages → deploy from `gh-pages` branch), same as the other repos
-3. Trigger the `scrape.yml` workflow once manually (workflow_dispatch) to confirm it runs end-to-end
+1. ~~Create the `recordwatch/grays-harbor-jail-monitor` GitHub repo, add as remote, and push~~ — done
+2. ~~Enable GitHub Pages (deploy from `gh-pages` branch)~~ — done, live at the URL above
+3. ~~Trigger the `scrape.yml` workflow once manually to confirm it runs end-to-end~~ — done, 133 in custody scraped successfully
 4. Add the Grays Harbor link to `mason-jail-roster/server.js`'s `.nav-section` (wajaildata.org hub)
